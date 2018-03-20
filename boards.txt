@@ -1,0 +1,52 @@
+# See: http://code.google.com/p/arduino/wiki/Platforms
+
+menu.cpu=Processor
+
+##############################################################
+
+digispark-tiny.name=Cuteduino
+digispark-tiny.upload.using=micronucleusprog
+digispark-tiny.upload.protocol=usb
+digispark-tiny.upload.tool=micronucleus
+digispark-tiny.upload.maximum_size=6012
+digispark-tiny.build.mcu=attiny85
+digispark-tiny.build.f_cpu=16500000L
+digispark-tiny.build.board=AVR_DIGISPARK
+digispark-tiny.build.core=tiny
+digispark-tiny.build.variant=digispark
+digispark-tiny.upload.wait_for_upload_port = false
+digispark-tiny.upload.use_1200bps_touch = false
+digispark-tiny.upload.disable_flushing = false
+digispark-tiny.bootloader.low_fuses=0xf1
+digispark-tiny.bootloader.high_fuses=0xd5
+digispark-tiny.bootloader.extended_fuses=0xfe
+digispark-tiny.bootloader.lock_bits=
+digispark-tiny.bootloader.unlock_bits=
+digispark-tiny.bootloader.file=micronucleus/micronucleus-1.11.hex
+digispark-tiny.bootloader.tool=arduino:avrdude
+
+##############################################################
+
+makeruno.name=Maker UNO
+
+makeruno.upload.tool=arduino:avrdude
+makeruno.upload.protocol=arduino
+makeruno.upload.maximum_size=32256
+makeruno.upload.maximum_data_size=2048
+makeruno.upload.speed=115200
+
+makeruno.bootloader.tool=arduino:avrdude
+makeruno.bootloader.low_fuses=0xFF
+makeruno.bootloader.high_fuses=0xDE
+makeruno.bootloader.extended_fuses=0x05
+makeruno.bootloader.unlock_bits=0x3F
+makeruno.bootloader.lock_bits=0x0F
+makeruno.bootloader.file=optiboot/optiboot_atmega328.hex
+
+makeruno.build.mcu=atmega328p
+makeruno.build.f_cpu=16000000L
+makeruno.build.board=AVR_ctuno
+makeruno.build.core=arduino
+makeruno.build.variant=standard
+
+##############################################################
