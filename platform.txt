@@ -5,8 +5,8 @@
 # For more info:
 # https://github.com/arduino/Arduino/wiki/Arduino-IDE-1.5---3rd-party-Hardware-specification
 
-name=Cytron AVR Boards
-version=1.5.4
+name=Cuteduino
+version=1.0.0
 
 # AVR compile variables
 # --------------------- 
@@ -66,11 +66,8 @@ recipe.size.regex.eeprom=^(?:\.eeprom)\s+([0-9]+).*
 # ------------------------------
 
 tools.micronucleus.cmd.path={runtime.tools.avr-dummy.path}/avrdude
-#tools.micronucleus.cmd.path.linux={runtime.ide.path}/hardware/digistump/avr/tools/avrdude
-
 tools.micronucleus.upload.params.verbose=-v
 tools.micronucleus.upload.params.quiet=-q
-#tools.micronucleus.upload.pattern="{cmd.path}" --run --timeout 60 "{build.path}/{build.project_name}.hex"
 tools.micronucleus.upload.pattern="{cmd.path}" -cdigispark --timeout 60 -Uflash:w:{build.path}/{build.project_name}.hex:i
  
 # USB Default Flags

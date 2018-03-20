@@ -26,27 +26,3 @@ digispark-tiny.bootloader.file=micronucleus/micronucleus-1.11.hex
 digispark-tiny.bootloader.tool=arduino:avrdude
 
 ##############################################################
-
-makeruno.name=Maker UNO
-
-makeruno.upload.tool=arduino:avrdude
-makeruno.upload.protocol=arduino
-makeruno.upload.maximum_size=32256
-makeruno.upload.maximum_data_size=2048
-makeruno.upload.speed=115200
-
-makeruno.bootloader.tool=arduino:avrdude
-makeruno.bootloader.low_fuses=0xFF
-makeruno.bootloader.high_fuses=0xDE
-makeruno.bootloader.extended_fuses=0x05
-makeruno.bootloader.unlock_bits=0x3F
-makeruno.bootloader.lock_bits=0x0F
-makeruno.bootloader.file=optiboot/optiboot_atmega328.hex
-
-makeruno.build.mcu=atmega328p
-makeruno.build.f_cpu=16000000L
-makeruno.build.board=AVR_ctuno
-makeruno.build.core=arduino
-makeruno.build.variant=standard
-
-##############################################################
