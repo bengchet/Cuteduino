@@ -13,7 +13,7 @@ script:
 - ver=`git describe --tags --always`
 - "./package/build_boards_manager_package.sh"
 - cd ~/tmp
-- git add package_cytron_makeruno_index.json
+- git add package_cuteduino_index.json
 - git commit -m "Cuteduino version $ver release"
 
 notifications:
