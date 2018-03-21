@@ -1,0 +1,38 @@
+sudo: false
+
+language: bash
+
+os:
+- linux
+
+before_script:
+- git config --global user.email "bengchet@cytron.com.my"
+- git config --global user.name "bengchet (via TravisCI)"
+
+script:
+- ver=`git describe --tags --always`
+- "./package/build_boards_manager_package.sh"
+- cd ~/tmp
+- git add package_cytron_makeruno_index.json
+- git commit -m "Cuteduino version $ver release"
+
+notifications:
+  email:
+    recipients:
+    - bengchet@cytron.io
+    on_success: change
+    on_failure: change
+deploy:
+  provider: releases
+  skip_cleanup: true
+  api_key:
+    secure: mPB+osu9MoOU2Zb2jcj+vZojlFrMn6J0xW8ZJc8W9J8yV9reB/1Nu6XWQXbwsWG2GeHXHxAqN44EMKocir61j5Xkt5GYmr8BKZNH8k8jLjEvREtvhAuKoH59yrX6n5+JcByuImD62d9puqS3G1aL3K4BZ4nJehcMqh/ujgSxZ2oSfHb1VeY0i6+kfPHfiI5wBybLYHNUr10p1MrQc49JkkEdEfZ/mp2d0SPbP3+RJ8ITBWrkikz0WMhNaMb9gFZ0P8KmjUBFDAlbmdos22MhKlHoYb50SZhGPslhwWnSrAXOmVQEDF8qX1B3Lssw/CvTA29ZdrOxDgJQoxQ1x6Ra9EgOGarsMNLUnDZ0/9f3q4e7LKTTfjgEcK9pP8EJ+yNEUJfyCdsYoN5Xo2AVqFa/7GdNlX3LrUaDa3sIJ9ue2jyH16aWIq8DYTnGZJjhl5eiRqqD08dRcuWdhWu+YzFS2dpNX5bx9zCV7nCIZ50czCsiGWzX/ZgZNilODmLDBUFAaW61Kti0UovbFf8Y4xqRRf6REcZ149xAZufoH2mBxg7KQ5JN1SpCmJ3mCM/YjxqXEd5GcbGBnFsxWZpSJYUTnZWhhuyKKfYNiUCsQqLCTUrSSZ0pO8PKAl3cQ2r3JDsQROgm+NjhA+iY1XRSiLomPOKwFPttnTGiBGdd3yobkMw=
+  file_glob: true
+  file: "$TRAVIS_BUILD_DIR/package/versions/$ver/*"
+  on:
+    repo: bengchet/Cuteduino
+    tags: true
+
+after_deploy:
+- cd ~/tmp
+- git push origin master

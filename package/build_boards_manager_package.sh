@@ -75,12 +75,11 @@ rm $old_json
 fi
 
 # deploy key
-#echo -n $CUTEDUINO_DEPLOY_KEY > ~/.ssh/cuteduino_deploy_b64
-#base64 --decode --ignore-garbage ~/.ssh/cuteduino_deploy_b64 > ~/.ssh/cuteduino_deploy
-#chmod 600 ~/.ssh/cuteduino_deploy
-#echo -e "Host $DEPLOY_HOST_NAME\n\tHostname github.com\n\tUser $DEPLOY_USER_NAME\n\tStrictHostKeyChecking no\n\tIdentityFile ~/.ssh/cuteduino_deploy" >> ~/.ssh/config
+echo -n $DEPLOY_KEY > ~/.ssh/deploy_b64
+base64 --decode --ignore-garbage ~/.ssh/deploy_b64 > ~/.ssh/deploy
+chmod 600 ~/.ssh/deploy
+echo -e "Host $DEPLOY_HOST_NAME\n\tHostname github.com\n\tUser $DEPLOY_USER_NAME\n\tStrictHostKeyChecking no\n\tIdentityFile ~/.ssh/deploy" >> ~/.ssh/config
 
 #update package_cytron_makeruno_index.json
-#git clone $DEPLOY_USER_NAME@$DEPLOY_HOST_NAME:$TRAVIS_REPO_SLUG.git ~/tmp
-#cp $new_json ~/tmp/
-#rm $new_json
+git clone $DEPLOY_USER_NAME@$DEPLOY_HOST_NAME:$TRAVIS_REPO_SLUG.git ~/tmp
+cp $new_json ~/tmp/
