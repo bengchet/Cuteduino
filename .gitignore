@@ -1,4 +1,5 @@
 *.json
 *.zip
 versions
+*.o
 
