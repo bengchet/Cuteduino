@@ -1,0 +1,90 @@
+{
+  "packages": [
+    {
+      "name": "cytron",
+      "maintainer": "Cytron Technologies Sdn Bhd",
+      "websiteURL": "https://www.cytron.io",
+      "email": "support@cytron.io",
+      "help": {
+        "online": "https://forum.cytron.io/"
+      },
+      "platforms": [
+        {
+          "name": "Cytron AVR Boards",
+          "architecture": "avr",
+          "version": "1.0.0-rc1",
+          "category": "Cytron",
+          "url": "https://github.com/bengchet/Cuteduino/releases/download/1.0.0-rc1/cuteduino-1.0.0-rc1.zip",
+          "archiveFileName": "cuteduino-1.0.0-rc1.zip",
+          "checksum": "SHA-256:f592aec9659c3c5b15659115cc0d809aa5854e1987cd5c7a23ffe1d720d503cb",
+          "size": "2399475",
+          "help": {
+            "online": "https://forum.cytron.io/"
+          },
+          "boards": [
+            {
+              "name": "Cuteduino"
+            }
+          ],
+          "toolsDependencies": [
+            {
+              "packager": "cytron",
+              "name": "avr-dummy",
+              "version": "1.0.0"
+            }
+          ]
+        }
+      ],
+      "tools": [
+        {
+          "name": "avr-dummy",
+          "version": "1.0.0",
+          "systems": [
+            {
+              "host": "i686-mingw32",
+              "url": "https://github.com/bengchet/avr-dummy/releases/download/1.0.0/avr-dummy-1.0.0-win32.zip",
+              "archiveFileName": "avr-dummy-1.0.0-win32.zip",
+              "checksum": "SHA-256:678c3831d97006920737f6f33d28a39b6a5ca251f962714f95e9633ef90366aa",
+              "size": "210963"
+            },
+            {
+              "host": "x86_64-apple-darwin",
+              "url": "https://github.com/bengchet/avr-dummy/releases/download/1.0.0/avr-dummy-1.0.0-osx.tar.gz",
+              "archiveFileName": "avr-dummy-1.0.0-osx.tar.gz",
+              "checksum": "SHA-256:cdd8c756a6c991a7783a52df2fd9e68d737d32c39ad6c45f333f2110c322cf55",
+              "size": "49630"
+            },
+            {
+              "host": "i386-apple-darwin",
+              "url": "https://github.com/bengchet/avr-dummy/releases/download/1.0.0/avr-dummy-1.0.0-osx.tar.gz",
+              "archiveFileName": "avr-dummy-1.0.0-osx.tar.gz",
+              "checksum": "SHA-256:cdd8c756a6c991a7783a52df2fd9e68d737d32c39ad6c45f333f2110c322cf55",
+              "size": "49630"
+            },
+            {
+              "host": "x86_64-pc-linux-gnu",
+              "url": "https://github.com/bengchet/avr-dummy/releases/download/1.0.0/avr-dummy-1.0.0-linux64.tar.gz",
+              "archiveFileName": "avr-dummy-1.0.0-linux64.tar.gz",
+              "checksum": "SHA-256:2d77db0c336585d82b98cf74426d547bd66eed55e841c06e2307119675b092b6",
+              "size": "11442"
+            },
+            {
+              "host": "i686-pc-linux-gnu",
+              "url": "https://github.com/bengchet/avr-dummy/releases/download/1.0.0/avr-dummy-1.0.0-linux32.tar.gz",
+              "archiveFileName": "avr-dummy-1.0.0-linux32.tar.gz",
+              "checksum": "SHA-256:0d93b4718b8a4d775de4b0d6000570f46006f163fffcf055e1612a1a8bf194b8",
+              "size": "11338"
+            },
+            {
+              "host": "arm-linux-gnueabihf",
+              "url": "https://github.com/bengchet/avr-dummy/releases/download/1.0.0/avr-dummy-1.0.0-linux-armhf.tar.gz",
+              "archiveFileName": "avr-dummy-1.0.0-linux-armhf.tar.gz",
+              "checksum": "SHA-256:17e51dc87a81bec31ad1a370d233f7db0148f61556f4872cb8d2b21d57b8be87",
+              "size": "10525"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
