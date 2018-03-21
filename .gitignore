@@ -1,5 +1,5 @@
-*.json
 *.zip
 versions
-*.o
+package_cuteduino_index.json
+
 
